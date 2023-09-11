@@ -1,0 +1,91 @@
+<h1 class="text-center mt-5">PENDAKIAN GUNUNG RINJANI</h1>
+<div class="countainer">
+  <div class="row">
+    <div class="col text-center">
+      <img
+        src="img/Rinjani.jpg"
+        alt="Albet Surya Kembara"
+        class="img-thumbnail mt-5"
+        width="100%"
+      />
+    </div>
+  </div>
+</div>
+<h1 class="text-center mt-4">Pengecekan Kuota Tiket Pendakian Gunung Rinjani</h1>
+
+<div class="row g-3 mt-4">
+  <div class="col-sm">
+    <label class="form-label">Entrance</label>
+    <select class="form-select">
+      <option selected>Choose...</option>
+      <option value="1">Sembalun</option>
+      <option value="2">Senaru</option>
+      <option value="3">Torean - Senange</option>
+      <option value="4">Timbaneh</option>
+      <option value="5">Aik Berik</option>
+      <option value="6">Tete Batu</option>
+    </select>
+  </div>
+  <div class="col-sm-5">
+    <label for="inputCity" class="form-label">City</label>
+    <input type="text" class="form-control" id="inputCity" />
+  </div>
+  <div class="col-sm">
+    <label for="inputCountry" class="form-label">Country</label>
+    <input type="text" class="form-control" id="inputCountry" />
+  </div>
+</div>
+
+<div class="row g-3 mt-4">
+  <div class="col mb-3">
+    <label for="tanggalMulai" class="form-label">Tanggal Mulai</label>
+    <input type="date" class="form-control" id="tanggalMulaiInput" />
+  </div>
+  <div class="col mb-3">
+    <label for="tanggalSelesai" class="form-label">Tanggal Selesai</label>
+    <input type="date" class="form-control" id="tanggalSelesaiInput" />
+  </div>
+  <button
+    type="submit"
+    class="btn btn-primary"
+    onclick="cekKuota()"
+  >
+    Cek Kuota
+  </button>
+</div>
+
+<p id="hasilKuota"></p>
+
+<script>
+  function cekKuota() {
+    // Mendapatkan tanggal yang dimasukkan oleh pengguna
+    let tanggalMulai = document.getElementById("tanggalMulaiInput").value;
+    let tanggalSelesai = document.getElementById("tanggalSelesaiInput").value;
+
+    // Simulasi pengecekan kuota dengan sumber data eksternal (ganti dengan logika yang sesuai)
+    let dataKuota = [
+      { tanggal: "2023-09-10", kuota: 200 },
+      { tanggal: "2023-09-11", kuota: 200 },
+      { tanggal: "2023-09-12", kuota: 200 },
+      // ... tambahkan data kuota untuk tanggal lainnya ...
+    ];
+
+    let totalKuotaTersedia = 0;
+
+    for (let i = 0; i < dataKuota.length; i++) {
+      let data = dataKuota[i];
+      if (data.tanggal >= tanggalMulai && data.tanggal <= tanggalSelesai) {
+        totalKuotaTersedia += data.kuota;
+      }
+    }
+
+    document.getElementById("hasilKuota").innerHTML =
+      "Kuota tersedia dari " +
+      tanggalMulai +
+      " hingga " +
+      tanggalSelesai +
+      ": " +
+      totalKuotaTersedia +
+      " tiket.";
+  }
+</script>

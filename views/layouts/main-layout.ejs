@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/style.css" />
+
+    <!-- Bootstrap Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+    />
+
+    <!-- Bootstrap JS (optional) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+    <title><%= title %></title>
+  </head>
+  <body>
+    <!-- Bootstrap JS (Popper.js is required for some components) -->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@2.11.6/dist/umd/popper.min.js"></script>
+  </body>
+
+  <%- include('nav') %>
+
+  <div class="container"><%- body %></div>
+
+  <div class="information text-center mt-4">
+    <div class="information-section">
+      <h2>INFORMATION</h2>
+      <p>TAMAN NASIONAL GUNUNG RINJANI</p>
+    </div>
+
+    <div class="information-item">
+      <div class="contact-information">
+        <img
+          src="https://www.rinjaninationalpark.id/frontend/images/contact/icon2.png"
+          alt="phone"
+          class="img-thumbnail"
+          width="50px"
+        />
+        <h3>Phone</h3>
+        <p>0811283939</p>
+      </div>
+
+      <div>
+        <img
+          src="https://www.rinjaninationalpark.id/frontend/images/contact/icon3.png"
+          alt="email"
+          class="img-thumbnail"
+          width="50px"
+        />
+        <h3>Email</h3>
+        <p>tngunungrinjani@menlhk.go.id tn.rinjani@gmail.com</p>
+      </div>
+
+      <div>
+        <img
+          src="https://www.rinjaninationalpark.id/frontend/images/contact/icon1.png"
+          alt="address"
+          class="img-thumbnail"
+          width="50px"
+        />
+        <h3>Address</h3>
+        <p>
+          Jl. Dr. Soedjono, Jl. Lingkar Selatan, Jempong Baru, Kec. Sekarbela,
+          Kota Mataram, Nusa Tenggara Bar. 83361
+        </p>
+      </div>
+    </div>
+  </div>
+</html>
